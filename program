@@ -1,0 +1,30 @@
+import time
+import sys
+i=0
+c=0
+while True:
+    pas=int(input("enter password"))
+    if pas==1711:
+        print("Password accepted")
+        break
+    else:
+        
+        print("Incorrect password \n try again")
+        i=i+1
+    if i==3:
+        c+=1
+        print("3 incorrect attempts please wait for 30 seconds")
+        for i in range(1,6):
+            s=str(i)
+            time.sleep(1)
+            print("\r",end='')
+            print(s,end='')
+        
+            
+        i=0
+        print()
+        
+        print("___"*20)
+        
+    if c==3:
+        sys.exit("Max number of attempts exceeded,exiting program")
